@@ -14,6 +14,8 @@ stages:
 
 build:
   stage: build
+  tags:
+    - hva
   image: maven:3.9.11
   script:
     - mvn clean package -DskipTests
@@ -23,6 +25,8 @@ build:
 
 test:
   stage: test
+  tags:
+    - hva
   image: maven:3.9.11
   script:
     - mvn test
@@ -51,6 +55,8 @@ build-sonar:
 
 docker:
   stage: docker
+  tags:
+    - hva
   image: docker:24.0.5
   services:
     - docker:dind
@@ -63,6 +69,8 @@ docker:
 
 deploy:
   stage: deploy
+  tags:
+    - hva
   script:
     - echo "Deploying on Render"
     - curl -X POST "$RENDER_DEPLOY_HOOK"
