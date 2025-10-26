@@ -28,6 +28,10 @@
     </scm>
     <properties>
         <java.version>17</java.version>
+
+        <sonar.projectKey>se-specialization-25-26-semester-1_tse2_rida-zeamari_bsn_ci_cd_37638413-f45d-4e6d-97be-561620accbbe</sonar.projectKey>
+        <sonar.projectName>Rida Zeamari BSN_CI_CD</sonar.projectName>
+        <sonar.qualitygate.wait>true</sonar.qualitygate.wait>
     </properties>
     <dependencies>
         <dependency>
@@ -45,6 +49,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
